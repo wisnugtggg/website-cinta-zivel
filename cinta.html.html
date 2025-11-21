@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Cinta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f2;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff1493;
+            font-size: 2.5em;
+        }
+        .heart {
+            font-size: 3em;
+            color: #ff69b4;
+        }
+        .message {
+            margin: 20px auto;
+            max-width: 600px;
+            font-style: italic;
+        }
+        button {
+            background-color: #ff1493;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #ff69b4;
+        }
+        img {
+            max-width: 300px;
+            height: auto;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Website Cinta 💖</h1>
+    <div class="heart">❤️</div>
+    <p class="message">
+        Cinta adalah perasaan yang indah, seperti bunga yang mekar di musim semi. Ia membawa kebahagiaan, harapan, dan kehangatan hati. Di sini, mari kita rayakan cinta dalam segala bentuknya.
+    </p>
+    <img src="https://via.placeholder.com/300x200/ff69b4/ffffff?text=Hati+Cinta" alt="Gambar Hati Cinta">
+    <p>Klik tombol di bawah untuk mendapatkan pesan cinta acak!</p>
+    <button onclick="showRandomMessage()">Dapatkan Pesan Cinta</button>
+    <p id="randomMessage" style="margin-top: 20px; font-weight: bold;"></p>
+
+    <script>
+        const messages = [
+            "Cinta adalah ketika hati kita berdegup lebih cepat hanya karena melihat senyuman zivell.",
+            "Dalam cinta, tidak ada kata terlambat. Setiap detik adalah kesempatan baru.",
+            "Cinta sejati adalah menerima seseorang apa adanya, dengan segala kekurangan dan kelebihannya.",
+            "Jika cinta adalah api, maka aku ingin terbakar selamanya dalam pelukannya.",
+            "Cinta bukanlah tentang mencari yang sempurna, tapi tentang menyempurnakan apa yang ada."
+        ];
+
+        function showRandomMessage() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById('randomMessage').textContent = messages[randomIndex];
+        }
+    </script>
+</body>
+</html>
